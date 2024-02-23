@@ -117,6 +117,44 @@ body::before {
 .grafiti-title {
     font-family: 'Permanent Marker', cursive;
 }
+@keyframes pulsate {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .btn-pulsante {
+    animation: pulsate 1.5s ease-in-out infinite;
+    display: inline-block; /* Ou outro display conforme necessário */
+    /* Estilização adicional do botão */
+    color: #fff; /* Cor do texto */
+    background-color: #007bff; /* Cor de fundo */
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Preenchimento */
+    border-radius: 5px; /* Borda arredondada */
+    text-decoration: none; /* Remover sublinhado */
+    font-weight: bold; /* Texto em negrito */
+  }
+  .btn-voltar {
+    background-color: rgba(235, 19, 19, 0.884); /* Cor de fundo vermelho */
+    color: white; /* Cor do texto branco */
+    padding: 5px 10px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
 
+.btn-voltar:hover {
+    background-color: darkred; /* Cor de fundo mais escura ao passar o mouse */
+}
+  
 
   
