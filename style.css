@@ -131,6 +131,44 @@ body::before {
       opacity: 1;
     }
   }
+  .nav-font-color {
+    font-family: 'Permanent Marker', cursive;
+    color: #5c5959;
+    position: relative;
+    padding-bottom: 5px;
+    display: inline-block; 
+    margin-right: 10px;
+}
+
+.nav-font-color::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #555;
+    transition: width 0.5s ease;
+}
+
+@keyframes pulseAnimation {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .pulse {
+    animation: pulseAnimation 2s infinite;
+  }
   
   .btn-pulsante {
     animation: pulsate 1.5s ease-in-out infinite;
@@ -156,5 +194,39 @@ body::before {
     background-color: darkred; /* Cor de fundo mais escura ao passar o mouse */
 }
   
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 600px;
+    perspective: 1000px;
+  }
+
+  .flip-card-front img{
+  
+    width: 100%;
+  }
+
+  .flip-card-back img{
+    margin: 5px;
+  }
+
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .texto-grafite {
+    font-family: 'Permanent Marker', cursive;
+    color:  #333;
+}
 
   
